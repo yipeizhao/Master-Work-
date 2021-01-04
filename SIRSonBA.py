@@ -10,6 +10,7 @@ alpha=0.1
 beta=0.01
 gamma=0.005
 delta=0.001
+experimentTime = 500
 #Creating a pandas dataframe which has three features:
 #Index of a node
 #Status of a node
@@ -65,7 +66,7 @@ def join(node):
 sumSusceptibleResult=[]
 sumRemovedResult=[]
 sumInfectedResult=[]
-for experimentTimes in range (0,10):
+for experimentCount in range (0,experimentTime):
 # Main Loop
     df=pd.DataFrame(data=data)
     initialInfected = random.choice(nodeList)
