@@ -9,7 +9,7 @@ G=nx.barabasi_albert_graph(500,2)
 alpha=0.1
 beta=0.01
 gamma=0.005
-delta=0.001
+delta=0.001 # hello
 experimentTime = 500
 #Creating a pandas dataframe which has three features:
 #Index of a node
