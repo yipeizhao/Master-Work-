@@ -1,3 +1,9 @@
+#This is a simulation of SIRS model, which I computed for my coursework submission
+#There are three stauts in SIRS mode:
+#Susceptible.
+#Infected: A person is infected. It can passes disease to a susceptible with probability alpha. Reover but become susceptible again 
+#Removed: A person is removed from the model, meaning that he/she cannot be infected anymore, but there is a chance for it to join back to the network.
+
 import networkx as nx
 import pandas as pd
 import random
