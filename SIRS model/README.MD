@@ -24,7 +24,7 @@ After the network intialisation, a pandas dataframe will be created, contains th
  <br/>
 Three arrays are initiated, they are used to store counts of nodes in each status.<br/>
 
-## Basic logic of this algorithm
+## Main Loop:
 1. For every experiment:</br>
  -Chooses a inital node to infect.<br/>
  -Changes its status to 1.<br/>
@@ -40,4 +40,14 @@ Three arrays are initiated, they are used to store counts of nodes in each statu
 7. Repeats step 1 - step 6 for expected number of expreiment times.
 8. Averages results and plot the results.
 <br/>
+A plot of preset parameters is also uploaded.
+
+
+# SIRS model on Barabasi Albert random model (with isolation)
+The methodology is similar, while a new appraoch for all nodes is introduced: isolation.<br/>
+Any node can choose to isolate itself with probability q, so it will become completely seperated from the others.<br/>
+The difference between removed and isolated is that an isolated node will not be able to join back in. Additionally, a removed node can only be changed from an infected node. However, any node with any status can become isolated. Also, since we are assuming that isolation period is long enough that an infected node can be categorized as a recover/removed node eventually.<br/>
+A new array will be initated at the start to store all isolated nodes. Also new arrays are created to store the count of isolated nodes for each experiment and time step.<br/>
+The only difference in the main loop besides storing results is that: an additional for loop is created. For all nodes in the nodeList, every node can decide to seperate itself with probability q.<br/>
+This algorithm can be simplified. A node can be simply removed from the network when it decides to isolate itself and making the algorithm much faster.
 A plot of preset parameters is also uploaded.
