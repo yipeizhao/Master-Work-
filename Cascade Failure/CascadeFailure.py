@@ -71,7 +71,7 @@ for phi in phiSpace:
                 else:
                     checkList.remove(node)
         #When the checklist becomes empty, append it into the sumResult list
-        sumResult.append(len(G.nodes)/GcSize)
+        sumResult.append((len(Gc.nodes)-len(G.nodes))/len(Gc.nodes))
     #After 500 experiment, append results of all 00 experiments into the phiResult list
     phiResult.append(sumResult)
 #Find the average result by different phi
